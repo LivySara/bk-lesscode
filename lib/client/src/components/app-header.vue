@@ -29,7 +29,7 @@
             </ul>
         </nav>
         <div class="top-info">
-            <div class="help-doc" @click="closePage(true)">{{ $t('帮助文档') }}</div>
+            <div class="info-item help-doc" @click="closePage(true)">{{ $t('帮助文档') }}</div>
             <bk-popover class="info-item"
                 theme="light header-top-info-popover"
                 animation="fade"
@@ -110,8 +110,8 @@
     import { useRouter } from '@/router'
     import { IAM_ACTION } from 'shared/constant'
     import changelog from '@/components/changelog-version'
-    import helpDocs from './help-docs.vue'
     import { getCurLang, changeLang } from '@/locales/i18n.js'
+    import helpDocs from './help-docs'
 
     export default defineComponent({
         components: {
@@ -282,13 +282,6 @@
             display: flex;
             align-items: center;
             margin-left: auto;
-
-            .help-doc {
-                font-family: MicrosoftYaHei;
-                color: #96A2B9;
-                cursor: pointer;
-                margin: 0 16px;
-            }
 
             .info-item {
                 cursor: pointer;
